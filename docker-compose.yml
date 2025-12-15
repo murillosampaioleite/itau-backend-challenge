@@ -1,0 +1,16 @@
+services:
+  password-validator-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: itau-backend-challenge
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+    environment:
+      - FLASK_ENV=development
+      - FLASK_DEBUG=1
+      - PYTHONUNBUFFERED=1
+      - PYTHONDONTWRITEBYTECODE=1
+
