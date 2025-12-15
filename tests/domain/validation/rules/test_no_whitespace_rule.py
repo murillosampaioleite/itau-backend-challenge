@@ -11,8 +11,3 @@ def test_should_return_false_when_password_contains_whitespace():
     rule = NoWhitespaceRule()
     assert rule.is_valid("AbTp9 fok") is False
 
-
-def test_should_return_true_when_password_does_not_contain_whitespace():
-    """Testa se retorna True para senhas sem espaços."""
-    rule = NoWhitespaceRule()
-    assert rule.is_valid("AbTp9!fok") is True

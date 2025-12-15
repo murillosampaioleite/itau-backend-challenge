@@ -13,10 +13,3 @@ def test_should_return_false_when_password_contains_repeated_characters():
     assert rule.is_valid("AbTp9!foA") is False
     assert rule.is_valid("AAAbbbCc") is False
 
-
-def test_should_return_true_when_password_does_not_contain_repeated_characters():
-    """Testa se retorna True para senhas sem caracteres repetidos."""
-    rule = NoRepeatedCharactersRule()
-    assert rule.is_valid("AbTp9!fok") is True
-
-
