@@ -208,6 +208,12 @@ Os testes estão organizados em três categorias:
 
 Todos os casos de teste do enunciado do desafio estão cobertos pelos testes de integração.
 
+### Resultado dos Testes
+
+Abaixo está a evidência de que todos os testes estão passando com sucesso:
+
+![Resultado dos Testes](https://freeimage.host/i/farVaoB)
+
 ## Documentação Swagger
 
 A aplicação inclui documentação interativa da API através do Swagger UI, facilitando testes e exploração dos endpoints sem necessidade de ferramentas externas.
