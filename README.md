@@ -212,7 +212,7 @@ Todos os casos de teste do enunciado do desafio estão cobertos pelos testes de 
 
 Abaixo está a evidência de que todos os testes estão passando com sucesso:
 
-![Resultado dos Testes](https://freeimage.host/i/farVaoB)
+[![farVaoB.md.jpg](https://iili.io/farVaoB.md.jpg)](https://freeimage.host/i/farVaoB)
 
 ## Documentação Swagger
 
