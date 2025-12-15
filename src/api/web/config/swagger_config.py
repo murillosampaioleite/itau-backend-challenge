@@ -103,6 +103,33 @@ def _get_base_swagger_spec() -> dict:
     }
 
 
+def get_health_check_swagger_spec() -> dict:
+    """Especificação Swagger para o endpoint de health check."""
+    return {
+        'tags': ['Health'],
+        'summary': 'Verifica o status da aplicação',
+        'description': 'Endpoint para verificar se a aplicação está funcionando corretamente',
+        'responses': {
+            200: {
+                'description': 'Aplicação está funcionando corretamente',
+                'schema': {
+                    'type': 'object',
+                    'properties': {
+                        'status': {
+                            'type': 'string',
+                            'example': 'healthy'
+                        },
+                        'service': {
+                            'type': 'string',
+                            'example': 'password-validator-api'
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
 def get_password_validation_swagger_spec() -> dict:
     """Especificação Swagger para o endpoint de validação de senha."""
     spec = _get_base_swagger_spec()
