@@ -130,17 +130,12 @@ cd itau-backend-challenge
 
 2. Execute a aplicação:
 ```bash
-docker-compose up --build
+docker-compose up -d --build
 ```
 
 A aplicação estará disponível em `http://localhost:8080` após a inicialização.
 
 ### Comandos Úteis do Docker Compose
-
-Executar em modo detached (background):
-```bash
-docker-compose up -d --build
-```
 
 Parar a aplicação:
 ```bash
@@ -195,22 +190,12 @@ Com a aplicação rodando via Docker Compose, execute os testes dentro do contai
 docker-compose exec password-validator-api pytest
 ```
 
-Para executar com cobertura de código:
-```bash
-docker-compose exec password-validator-api pytest --cov=src --cov-report=term-missing
-```
-
 ### Executar Testes Localmente
 
 Se estiver executando localmente, ative o ambiente virtual e execute:
 
 ```bash
 pytest
-```
-
-Ou com cobertura:
-```bash
-pytest --cov=src --cov-report=term-missing
 ```
 
 ### Estrutura dos Testes
@@ -235,14 +220,6 @@ Com a aplicação rodando, acesse:
 http://localhost:8080/swagger
 ```
 
-### Funcionalidades do Swagger
-
-- **Interface Interativa**: Teste todos os endpoints diretamente no navegador
-- **Documentação Completa**: Visualize descrições detalhadas de cada endpoint, parâmetros e respostas
-- **Exemplos Práticos**: Endpoints pré-configurados com exemplos de cada cenário de teste
-- **Validação em Tempo Real**: Execute requisições e veja respostas imediatamente
-- **Especificação OpenAPI**: Acesse a especificação JSON completa em `/apispec.json`
-
 ### Como Usar o Swagger
 
 1. Inicie a aplicação com `docker-compose up --build`
@@ -252,19 +229,6 @@ http://localhost:8080/swagger
 5. Preencha os parâmetros necessários no body da requisição
 6. Clique em "Execute" para enviar a requisição
 7. Visualize a resposta, código de status HTTP e headers retornados
-
-### Endpoints de Exemplo no Swagger
-
-Além do endpoint principal de validação, o Swagger inclui endpoints pré-configurados para cada cenário de teste do desafio:
-
-- `/api/v1/passwords/validation/senha-valida` - Senha que atende todas as regras
-- `/api/v1/passwords/validation/senha-vazia` - Senha vazia
-- `/api/v1/passwords/validation/senha-muito-curta` - Senha com menos de 9 caracteres
-- `/api/v1/passwords/validation/senha-sem-digito` - Senha sem dígito
-- `/api/v1/passwords/validation/senha-com-repeticao` - Senha com caracteres repetidos
-- E outros cenários de teste
-
-Cada endpoint de exemplo já vem pré-configurado com a senha de teste correspondente, facilitando a validação rápida de cada regra.
 
 ## Endpoints da API
 
@@ -388,13 +352,7 @@ A solução foi desenvolvida seguindo os princípios SOLID e Clean Architecture:
 - **Docker**: Containerização da aplicação
 - **Docker Compose**: Orquestração de containers
 
-## Desenvolvimento
-
-### Estrutura de Commits
-
-Os commits seguem padrões convencionais quando aplicável, facilitando rastreabilidade e histórico do projeto.
-
-### Próximos Passos
+## Próximos Passos sugeridos
 
 Possíveis melhorias e extensões futuras:
 
